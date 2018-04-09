@@ -1,0 +1,402 @@
+html,body {
+    font-family: "Times New Roman", Times, serif;
+    max-width: 100%;
+    height: 100%;/*I use height becuase wihtout it the gradient doesn't apear on the page. The gradient i took oi from the https://uigradients.com/*/
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #ADA996;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*
+=========================
+ Navigation Bar
+=========================
+*/
+@media(min-width:768px) {
+    .navbar-inverse {
+    background: white;
+    border: none;
+}
+
+.navbar-inverse .navbar-nav li a {
+    color: black;
+    font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
+    transition: all 0.5s;
+	/*I am using transition-property and duration for smoother hover effect*/
+}
+    
+.navbar-inverse .navbar-nav li a:hover {
+    text-decoration: underline;
+    text-decoration-color: #939596;
+    color: #939596;
+}
+
+.navbar-inverse .navbar-nav .clicked a {
+    color: #939596;
+    text-decoration: underline;
+    text-decoration-color: #939596;
+}
+
+/*.navbar-inverse .navbar-nav .clicked {
+    background-color: black;
+}*/
+
+.navbar-inverse .navbar-nav li {
+    transition: all 0.5s;/*I am using transition-property and duration for smoother hover effect*/
+}
+
+/*.navbar-inverse .navbar-nav li:hover {
+    transform: scale(1.1);
+}
+*/
+.navbar-inverse .navbar-brand {
+    color: black;
+    transition-duration: 0.5s;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    background-color: #939596;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+.navbar-inverse .navbar-toggle icon-bar:hover {
+    color: white;
+}
+
+}
+
+@media(max-width:767px) {
+  
+.navbar-inverse .navbar-nav li a {
+    color: white;
+    font-size: 1.2em;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+}
+/*
+======================
+END of Navigation Bar
+======================
+*/
+
+
+/*
+=========================
+Phot Grid - Releases.html
+=========================
+*/
+
+.photo_grid {
+    animation: fadein 2s;
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+
+@media screen and (min-width: 980px) /* Desktop */ {
+  .thumbnail {
+    position: relative;
+    overflow: hidden;/*I use this attribute to hide the <p> element*/
+}
+
+.img-description {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .75);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    position: absolute;
+	bottom: 0;
+    left: 0;
+    color: white;
+    padding: 15px 25px;
+    opacity: 0;/*I used this for smoother opacity*/
+    transition-property: all;
+    transition-duration: 0.5s;
+    transform: translateY(100%);
+    }
+
+.thumbnail:hover .img-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+
+@media (max-width: 979px) /* Tablet and Smartphones- I removed the hover effect for smaller devices*/ {
+    .img-description {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    }
+}
+
+
+
+/* 
+====================
+Content - Index.html
+====================
+*/
+
+section {
+    display: block;
+}
+
+section img {
+    animation-name: fadeBounce;
+    animation-duration: 3s;
+    width: 50%;
+    position: relative;
+    top: 150px;
+    display: block;/*I use display: block and margin: 0 auto to positon the img in the center.*/
+    margin: 0 auto;
+}
+
+@media(max-width:991px) {
+    section img {
+    animation-name: fadeBounce;
+    animation-duration: 3s;
+    width: 80%;
+    position: relative;
+    top: 150px;
+    display: block;/*I use display: block and margin: 0 auto to positon the img in the center.*/
+    margin: 0 auto;
+}
+}
+
+
+
+/*
+=================================
+Styling Main content - band.html
+=================================
+*/
+.main-content {
+    animation: fadein 2s;
+    display: block;
+    width: 80%;
+    border: 1px solid gray;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding: 25px;
+    background-color: white;
+    text-align: justify;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0, 0.6);
+}
+
+.main-content p {
+    font-family: 'Lato', sans-serif;
+}
+
+.band {
+    width: 35%;
+    height: 255px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 20px;
+}
+
+@media(max-width:896px) {
+    .band {
+    width: 35%;
+    height: 150px;
+    float: left;
+    margin-right: 15px; 
+    }
+}
+
+@media(max-width:631px) {
+    .band {
+    width: 35%;
+    height: 100px;
+    float: left;
+    margin-right: 15px; 
+    }
+}
+
+@media(max-width:400px) {
+    .band {
+    width: 35%;
+    height: 70px;
+    float: left;
+    margin-right: 15px; 
+    }
+}
+
+
+/*
+==============================
+Styling Gallery - Gallery.html
+==============================
+*/
+@media(min-width:980px) {
+    .photo_grid2 {
+    animation: fadein 2s;
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+/*I am using this to make all the photos have the same size because the last photo has smaller height. I created a second class "gallery" and gave it fixed height because the last photo has diferrent size of the of the others*/
+ .thumbnail .gallery {
+    height:400px;
+    width:100%;
+     transition: all 1s;
+}
+
+.thumbnail .gallery:hover {
+    transform: scale(1.5);
+}
+}
+
+
+
+@media (max-width: 979px) /* Tablet */ {
+.photo_grid2 {
+    animation: fadein 2s;
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+    
+.thumbnail .gallery {
+    height:320px;
+    width:100%;
+}
+}
+
+@media(max-width: 767px) {
+.photo_grid2 {
+    animation: fadein 2s;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+    
+.thumbnail .gallery {
+        height:auto;
+        width:100%;
+    }
+}
+
+/*
+=============
+Footer
+=============
+*/
+footer {
+    
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /*border-top: 1px solid rgba(24, 21, 21, 0.5);
+    border-bottom: 1px solid rgba(24, 21, 21, 0.5);*/
+    padding: 1px;
+    text-align: center;
+    }
+/*I used inline block to align the i tag with the image on the top right corner. Otherwise it was outside of the border.*/
+
+
+footer a {
+    padding: 10px;
+    box-sizing: border-box;
+    float: right;
+}
+
+.fa-facebook-square {
+    margin-right: 10px;
+    color:#3b5998;
+    transition: all 0.5s;
+}
+
+.fa-twitter-square {
+    color:#0084b4;
+    transition: all 0.5s;
+}
+
+.fa-instagram {
+    color:#262626;
+    transition: all 0.5s;
+}
+
+.fa-facebook-square:hover,.fa-twitter-square:hover,.fa-instagram:hover {
+    transform: scale(1.7);
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.group:before, footer a:before,
+.group:after, footer a:after {
+  content: "";
+  display: table;
+}
+.group:after, footer a:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+@keyframes fadeBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-200%);
+    }
+    
+    40% {
+        transform: translateY(0);
+    }
+    
+    55% {
+        transform: translateY(-6px);
+    }
+    
+    70% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    85% {
+        transform: translateY(-3px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+
+/*.group:before, .nav-bar ul:before,
+.group:after,
+.nav-bar ul:after {
+  content: "";
+  display: table;
+}
+.group:after, .nav-bar ul:after {
+  clear: both;
+}
+.group, .nav-bar ul {
+  clear: both;
+  *zoom: 1;
+}*/
+
